@@ -16,7 +16,7 @@ const FooterHeading: React.FC<{ text: string }> = ({ text }) => (
 
 export const Footernew: React.FC = () => (
   <footer className="footer">
-    <div className="footer-inner">
+    <div className="footer-inner container">
       <div className="footer-grid">
         {footerColumns.map((col) => (
           <div className="footer-col" key={col.id}>

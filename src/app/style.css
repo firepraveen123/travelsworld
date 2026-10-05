@@ -336,7 +336,7 @@ button, input, textarea, select { font-family: inherit; }
   padding: clamp(20px, 3.8vw, 56px) 0 clamp(14px, 1.8vw, 28px);
 }
 .footer-inner {
-  width: min(1240px, 92%);
+  /* width: min(1240px, 92%); */
   margin: 0 auto;
 }
 .footer-grid {
