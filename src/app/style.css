@@ -13,7 +13,9 @@ body { font-family: 'Open Sans', sans-serif; background: #fff; color: var(--brow
 button, input, textarea, select { font-family: inherit; }
 .container {
   width: 100%;
-  max-width: 1180px;
+  /* max-width: 1180px; */
+  max-width: 92%;
+
   margin: 0 auto;
   padding: 0 30px;
   box-sizing: border-box;
@@ -334,7 +336,7 @@ button, input, textarea, select { font-family: inherit; }
   padding: clamp(20px, 3.8vw, 56px) 0 clamp(14px, 1.8vw, 28px);
 }
 .footer-inner {
-  width: min(1240px, 92%);
+  /* width: min(1240px, 92%); */
   margin: 0 auto;
 }
 .footer-grid {
@@ -462,6 +464,7 @@ button, input, textarea, select { font-family: inherit; }
 .footer-legal a:last-child { padding-right: 0; }
 
 /* responsive */
+
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -483,3 +486,4 @@ button, input, textarea, select { font-family: inherit; }
   .blog-grid { grid-template-columns: 1fr; }
   .blog-img { height: 160px; }
 }
+
