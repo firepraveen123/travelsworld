@@ -1,15 +1,23 @@
 'use client';
 
-import React from 'react';
+import * as React from 'react';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
+
 export const ClientLayoutWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return (
-    <div className="min-h-screen flex flex-col justify-between bg-[#080d1a]">
-      <Navbar />
-      <main className="flex-1">{children}</main>
-      <Footer />
-    </div>
+  return React.createElement(
+    'div',
+    { className: 'min-h-screen flex flex-col justify-between' },
+    React.createElement(Navbar),
+    React.createElement('main', { className: 'flex-1' }, children),
+    React.createElement(Footer)
   );
 };

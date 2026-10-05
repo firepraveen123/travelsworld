@@ -2,25 +2,109 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import {
-  ChevronDown,
-  Bus,
-  Car,
-  Plane,
-  Clock,
-  Navigation,
-  Zap,
-  Building2,
-  Briefcase,
-  Building,
-  GraduationCap,
-  HeartPulse,
-  Utensils,
-  Factory,
-  MapPin,
-  Menu,
-  X
-} from 'lucide-react';
+// Lightweight inline icon components to avoid dependency on `lucide-react`
+
+type IconProps = { className?: string };
+
+const ChevronDown: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const Menu: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const X: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const MapPin: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M12 21s-6-4.35-6-10a6 6 0 1112 0c0 5.65-6 10-6 10z" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="12" cy="11" r="2" />
+  </svg>
+);
+
+// Simple placeholder icons for various names used in the navbar
+const Bus = CarPlaceholder('bus');
+const Car = CarPlaceholder('car');
+const Plane: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M2 12h20M6 12l3-3 3 3 3-3 3 3" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+const Clock: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <circle cx="12" cy="12" r="9" />
+    <path d="M12 7v5l3 3" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+const Navigation: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+const Zap: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const Building2: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <rect x="3" y="3" width="7" height="18" />
+    <rect x="14" y="7" width="7" height="14" />
+  </svg>
+);
+const Briefcase: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <rect x="2" y="7" width="20" height="12" rx="2" />
+    <path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" />
+  </svg>
+);
+const Building: React.FC<IconProps> = Building2;
+const GraduationCap: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M22 12l-10 6L2 12l10-6 10 6z" />
+    <path d="M12 6v6" />
+  </svg>
+);
+const HeartPulse: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M3 12s1-4 6-4 6 4 9 4 6-4 6-4" />
+    <path d="M12 21s-4-2-7-5" />
+  </svg>
+);
+const Utensils: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M7 2v11" />
+    <path d="M3 6h8" />
+    <path d="M21 2v11" />
+    <path d="M17 6h4" />
+  </svg>
+);
+const Factory: React.FC<IconProps> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M3 21h18" />
+    <path d="M3 21V8l6 4 6-6 6 4v11" />
+  </svg>
+);
+
+function CarPlaceholder(_type: string) {
+  return ({ className }: IconProps) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="3" y="7" width="18" height="8" rx="2" />
+      <circle cx="7" cy="17" r="1.5" />
+      <circle cx="17" cy="17" r="1.5" />
+    </svg>
+  );
+}
 
 export const Navbar: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -61,7 +145,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#D34F0D] text-white shadow-xl">
-      <div className="max-w-[1536px] mx-auto h-[109px] pt-[16px] pb-[16px] pl-[20px] pr-[20px] flex items-center justify-between gap-4">
+      <div className=" flex items-center justify-between gap-4 container">
         {/* Official TravelsWorld White SVG Logo */}
         <Link href="/" className="flex items-center group">
           <img

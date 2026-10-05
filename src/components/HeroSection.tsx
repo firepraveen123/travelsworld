@@ -1,7 +1,35 @@
 'use client';
 
 import React from 'react';
-import { Award, ArrowRight, CheckCircle, PhoneCall } from 'lucide-react';
+
+const AwardIcon = ({ className = 'w-4 h-4' }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+    <path d="M7 3h10v4a5 5 0 0 1-10 0V3Z" />
+    <path d="M8 11h8v2a4 4 0 0 1-8 0v-2Z" />
+    <path d="M12 15v4" />
+    <path d="M9 19h6" />
+  </svg>
+);
+
+const ArrowRightIcon = ({ className = 'w-4 h-4' }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+    <path d="M5 12h14" />
+    <path d="m13 5 7 7-7 7" />
+  </svg>
+);
+
+const CheckCircleIcon = ({ className = 'w-4 h-4' }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+    <circle cx="12" cy="12" r="9" />
+    <path d="m9 12 2 2 4-5" />
+  </svg>
+);
+
+const PhoneCallIcon = ({ className = 'w-4 h-4' }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3.1 5.18 2 2 0 0 1 5.09 3h3a2 2 0 0 1 2 1.72c.13.98.36 1.93.68 2.84a2 2 0 0 1-.45 2.11L9 10.91a16 16 0 0 0 6.09 6.09l1.24-1.32a2 2 0 0 1 2.11-.45c.91.32 1.86.55 2.84.68A2 2 0 0 1 22 16.92Z" />
+  </svg>
+);
 
 export const HeroSection: React.FC = () => {
   return (
