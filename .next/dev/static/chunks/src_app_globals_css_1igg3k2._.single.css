@@ -504,6 +504,10 @@
     display: none;
   }
 
+  .inline {
+    display: inline;
+  }
+
   .inline-block {
     display: inline-block;
   }
@@ -900,10 +904,6 @@
     .border-white\/30 {
       border-color: color-mix(in oklab, var(--color-white) 30%, transparent);
     }
-  }
-
-  .bg-\[\#080d1a\] {
-    background-color: #080d1a;
   }
 
   .bg-\[\#A74300\] {

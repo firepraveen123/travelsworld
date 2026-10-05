@@ -2,7 +2,26 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MessageSquare } from 'lucide-react';
+import { BiMessageSquare } from 'react-icons/bi';
+
+const PhoneIcon = ({ className = 'w-3.5 h-3.5' }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3.08 4.18 2 2 0 0 1 5.06 2h3a2 2 0 0 1 2 1.72l.5 3.43a2 2 0 0 1-.57 1.81L8.1 10.9a16 16 0 0 0 5 5l1.94-1.89a2 2 0 0 1 1.81-.57l3.43.5A2 2 0 0 1 22 16.92Z" />
+  </svg>
+);
+
+const MailIcon = ({ className = 'w-3.5 h-3.5' }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+    <rect x="3" y="5" width="18" height="14" rx="2" />
+    <path d="m4 7 8 6 8-6" />
+  </svg>
+);
+
+const MessageIcon = ({ className = 'w-3.5 h-3.5' }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+  </svg>
+);
 
 export const Footer: React.FC = () => {
   return (
@@ -101,7 +120,7 @@ export const Footer: React.FC = () => {
                 {/* Phone Card */}
                 <a href="tel:+918095499999" className="flex items-center gap-2.5 group">
                   <div className="w-8 h-8 rounded-lg border border-white/30 flex items-center justify-center shrink-0 group-hover:bg-white group-hover:text-[#A74300] transition-all">
-                    <Phone className="w-3.5 h-3.5" />
+                    <PhoneIcon className="w-3.5 h-3.5" />
                   </div>
                   <div>
                     <div className="text-[10px] text-amber-200 font-semibold uppercase">Mobile 24/7</div>
@@ -112,7 +131,7 @@ export const Footer: React.FC = () => {
                 {/* WhatsApp Card */}
                 <a href="https://wa.me/918095499999" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 group">
                   <div className="w-8 h-8 rounded-lg border border-white/30 flex items-center justify-center shrink-0 group-hover:bg-white group-hover:text-[#A74300] transition-all">
-                    <MessageSquare className="w-3.5 h-3.5" />
+                    <BiMessageSquare className="w-3.5 h-3.5" />
                   </div>
                   <div>
                     <div className="text-[10px] text-amber-200 font-semibold uppercase">WhatsApp 24/7</div>
@@ -123,7 +142,7 @@ export const Footer: React.FC = () => {
                 {/* Email Card */}
                 <a href="mailto:info@travelsworld.com" className="flex items-center gap-2.5 group">
                   <div className="w-8 h-8 rounded-lg border border-white/30 flex items-center justify-center shrink-0 group-hover:bg-white group-hover:text-[#A74300] transition-all">
-                    <Mail className="w-3.5 h-3.5" />
+                    <MailIcon className="w-3.5 h-3.5" />
                   </div>
                   <div>
                     <div className="text-[10px] text-amber-200 font-semibold uppercase">Email us</div>
