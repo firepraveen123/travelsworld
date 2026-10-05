@@ -61,7 +61,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#D34F0D] text-white shadow-xl">
-      <div className="max-w-[1536px] mx-auto h-[109px] pt-[16px] pb-[16px] pl-[20px] pr-[20px] flex items-center justify-between gap-4">
+      <div className=" flex items-center justify-between gap-4 container">
         {/* Official TravelsWorld White SVG Logo */}
         <Link href="/" className="flex items-center group">
           <img

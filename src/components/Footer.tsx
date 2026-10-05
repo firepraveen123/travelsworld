@@ -7,7 +7,7 @@ import { Phone, Mail, MessageSquare } from 'lucide-react';
 export const Footer: React.FC = () => {
   return (
     <footer className="w-full bg-[#A74300] text-white text-xs font-sans border-t border-[#c45000]">
-      <div className="max-w-[1536px] mx-auto p-[20px] space-y-[32px] flex flex-col justify-between min-h-[460px]">
+      <div className="container min-h-[460px]">
         {/* Main Footer Columns Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-[32px] pt-4">
           {/* Column 1: SERVICES */}

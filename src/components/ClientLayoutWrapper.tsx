@@ -6,7 +6,7 @@ import { Footer } from './Footer';
 
 export const ClientLayoutWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-[#080d1a]">
+    <div className="min-h-screen flex flex-col justify-between">
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
