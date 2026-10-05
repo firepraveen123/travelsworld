@@ -195,9 +195,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: 40px;
   text-transform: uppercase;
-  color: #5B2C06;
-  max-width: 582px;
-}
+  color: var(--brown);
+  max-width: 500px;}
 .Common_description{ margin-top: 16px;
   font-size: 11px;
   line-height: 1.6;
