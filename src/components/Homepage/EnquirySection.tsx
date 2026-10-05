@@ -106,7 +106,9 @@ const EnquiryForm = ({ title, subtitle, fields, countryCodes, buttonText, onSubm
 
 const EnquirySection = ({ content, fields, countryCodes, onSubmit }: EnquirySectionProps) => (
   <section className="enq-section">
-    <div className="container enq-grid">
+        <div className="container ">
+
+    <div className=" enq-grid">
       <div className="enq-left">
         <SectionTag text={content.tag} />
         <h2 className="Common_title">{content.title}</h2>
@@ -122,6 +124,8 @@ const EnquirySection = ({ content, fields, countryCodes, onSubmit }: EnquirySect
         onSubmit={onSubmit}
       />
     </div>
+    </div>
+
   </section>
 );
 

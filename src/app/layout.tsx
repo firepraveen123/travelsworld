@@ -24,7 +24,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-white text-slate-900 font-sans selection:bg-orange-500 selection:text-white">
+      <body className="bg-slate-950 text-slate-100 font-sans selection:bg-orange-500 selection:text-white " >
         <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>
