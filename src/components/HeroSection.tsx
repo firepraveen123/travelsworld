@@ -49,7 +49,7 @@ export const HeroSection: React.FC = () => {
         <div className="lg:col-span-7 space-y-6">
           {/* 24 Years Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 border border-white/30 text-amber-200 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <Award className="w-4 h-4 text-amber-300" />
+            <AwardIcon className="w-4 h-4 text-amber-300" />
             <span>24 Years of Responsibility & Excellence</span>
           </div>
 
@@ -65,19 +65,19 @@ export const HeroSection: React.FC = () => {
           {/* Quick Highlights list */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-semibold text-slate-100 font-sans">
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-amber-300 shrink-0" />
+              <CheckCircleIcon className="w-4 h-4 text-amber-300 shrink-0" />
               <span>Certified Drivers & Background Verified</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-amber-300 shrink-0" />
+              <CheckCircleIcon className="w-4 h-4 text-amber-300 shrink-0" />
               <span>24/7 Live Operations Support Desk</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-amber-300 shrink-0" />
+              <CheckCircleIcon className="w-4 h-4 text-amber-300 shrink-0" />
               <span>Real-Time GPS Tracking & Panic Alert Tech</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-amber-300 shrink-0" />
+              <CheckCircleIcon className="w-4 h-4 text-amber-300 shrink-0" />
               <span>Pan-India Fleet Operations (8+ Major Hubs)</span>
             </div>
           </div>
@@ -88,13 +88,13 @@ export const HeroSection: React.FC = () => {
               href="#quote-form"
               className="px-8 py-4 rounded-full bg-white text-[#D34F0D] text-sm font-extrabold shadow-xl hover:bg-slate-100 hover:scale-105 transition-all inline-flex items-center gap-2 font-sans"
             >
-              Get Corporate Quote <ArrowRight className="w-4 h-4" />
+              Get Corporate Quote <ArrowRightIcon className="w-4 h-4" />
             </a>
             <a
               href="tel:+918095499999"
               className="px-6 py-4 rounded-full bg-white/15 border border-white/30 text-white text-sm font-bold hover:bg-white/25 transition-all inline-flex items-center gap-2 font-sans"
             >
-              <PhoneCall className="w-4 h-4 text-amber-300" /> +91 80954 99999
+              <PhoneCallIcon className="w-4 h-4 text-amber-300" /> +91 80954 99999
             </a>
           </div>
         </div>
@@ -104,9 +104,7 @@ export const HeroSection: React.FC = () => {
           <div className="relative w-full max-w-md bg-black/20 backdrop-blur-xl border border-white/30 rounded-3xl p-6 shadow-2xl space-y-6">
             <div className="flex items-center justify-between border-b border-white/20 pb-4">
               <div>
-                <span className="text-[10px] text-amber-200 font-bold uppercase tracking-widest block font-sans">
-                  Enterprise Mobility
-                </span>
+               
                 <h3 className="text-xl font-bold text-white font-heading">
                   100% Compliant & Safe
                 </h3>

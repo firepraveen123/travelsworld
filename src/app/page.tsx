@@ -11,8 +11,8 @@ import HomapageSection from '@/components/Homepage/HomapageSection';
 export default function Home() {
   return (
     <>
-    <HomapageSection />
-     
+      
+      <HomapageSection />
     </>
   );
 }

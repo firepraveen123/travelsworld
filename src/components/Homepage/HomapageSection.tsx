@@ -1,3 +1,5 @@
+'use client';
+
 // import './styles/global.css';
 import FaqSection from '../../components/Homepage/FaqSection';
 import BlogSection from '../../components/Homepage/BlogSection';
