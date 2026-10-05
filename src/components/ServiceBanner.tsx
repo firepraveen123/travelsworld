@@ -76,43 +76,12 @@ export const ServiceBanner: React.FC<ServiceBannerProps> = ({
   imageAlt = 'Service Banner Fleet Transportation',
   breadcrumbTitle,
   icon,
-  showBreadcrumb = true,
+  showBreadcrumb = false,
   badgeText,
   className = '',
 }) => {
-  const displayBreadcrumbTitle = breadcrumbTitle || title;
-
   return (
     <div className={`w-full font-sans ${className}`}>
-      {/* Light Top Subheader Bar (Icon + Title) */}
-      {showBreadcrumb && (
-        <div className="w-full bg-white border-b border-slate-100 py-3.5 sm:py-4 shadow-sm">
-          <div className="max-w-[1536px] mx-auto px-5 sm:px-8 lg:px-[57px] flex items-center gap-3.5 sm:gap-4">
-            {icon ? (
-              <Image
-                src={icon}
-                alt={displayBreadcrumbTitle}
-                width={44}
-                height={44}
-                className="w-[44px] h-[44px] object-contain shrink-0"
-              />
-            ) : (
-              <div className="w-[44px] h-[44px] rounded-[8px] bg-[#F17F21]/[0.08] border border-[#F17F21]/[0.24] flex items-center justify-center shrink-0 text-[#F17F21]">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="3" y="6" width="18" height="13" rx="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <circle cx="7.5" cy="15.5" r="1.5" fill="currentColor" />
-                  <circle cx="16.5" cy="15.5" r="1.5" fill="currentColor" />
-                  <path d="M6 10h12" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-            )}
-            <span className="text-xl sm:text-2xl font-bold text-[#1C3E68] font-sans tracking-tight">
-              {displayBreadcrumbTitle}
-            </span>
-          </div>
-        </div>
-      )}
-
       {/* Main Service Banner Section (Full Auto Width 100%) */}
       <section className="relative w-full overflow-hidden text-white min-h-[500px] lg:min-h-[628px] flex items-center opacity-100 shadow-xl">
         {/* Background Fleet / Transport Image */}
