@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { Navbar } from './Navbar';
-import { Footer } from './Footer';
+import { Footernew } from './Footernew';
 
 declare global {
   namespace JSX {
@@ -18,6 +18,6 @@ export const ClientLayoutWrapper: React.FC<{ children: React.ReactNode }> = ({ c
     { className: 'min-h-screen flex flex-col justify-between' },
     React.createElement(Navbar),
     React.createElement('main', { className: 'flex-1' }, children),
-    React.createElement(Footer)
+    React.createElement(Footernew)
   );
 };
