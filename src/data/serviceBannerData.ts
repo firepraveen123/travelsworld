@@ -3,7 +3,7 @@ import { ServiceBannerProps } from '@/components/ServiceBanner';
 export const serviceBannerData: Record<string, ServiceBannerProps> = {
   'corporate-employee-transportation': {
     title: 'CORPORATE EMPLOYEE TRANSPORTATION SERVICES',
-    breadcrumbTitle: 'Corporate Employee Transportation',
+    icon: '/images/Corporate-transport.svg',
     description:
       'Get technology-enabled and reliable employee transportation services simplifying daily commutes. It improves workforce mobility and keeps the business moving.',
     secondaryDescription:
@@ -16,6 +16,7 @@ export const serviceBannerData: Record<string, ServiceBannerProps> = {
   'corporate-fleet-management': {
     title: 'CORPORATE FLEET MANAGEMENT SERVICES',
     breadcrumbTitle: 'Corporate Fleet Management',
+    icon: '/images/FleetManagement.svg',
     description:
       'Comprehensive vehicle leasing, maintenance, and fleet optimization solutions designed for enterprise operations across major industrial hubs.',
     secondaryDescription:
@@ -30,6 +31,7 @@ export const serviceBannerData: Record<string, ServiceBannerProps> = {
   'airport-transfers': {
     title: 'EXECUTIVE AIRPORT TRANSFER SERVICES',
     breadcrumbTitle: 'Airport Transfers',
+    icon: '/images/Airport.svg',
     description:
       'Punctual, 24/7 meet-and-greet airport pickup and drop-off services for corporate executives, international delegations, and guests.',
     secondaryDescription:
@@ -44,6 +46,7 @@ export const serviceBannerData: Record<string, ServiceBannerProps> = {
   'monthly-hourly-rentals': {
     title: 'MONTHLY & HOURLY CORPORATE CAR RENTALS',
     breadcrumbTitle: 'Monthly & Hourly Rentals',
+    icon: '/images/Rental.svg',
     description:
       'Flexible long-term and short-term commercial car rental options tailored for business trips and flexible executive mobility.',
     secondaryDescription:
@@ -58,6 +61,7 @@ export const serviceBannerData: Record<string, ServiceBannerProps> = {
   'outstation-rides': {
     title: 'INTERCITY OUTSTATION TRANSPORT SERVICES',
     breadcrumbTitle: 'Outstation Rides',
+    icon: '/images/Outstation-rides.svg',
     description:
       'Safe, comfortable inter-city travel solutions with verified chauffeurs and premium long-distance commercial vehicles.',
     secondaryDescription:
@@ -72,6 +76,7 @@ export const serviceBannerData: Record<string, ServiceBannerProps> = {
   'luxury-car-rentals': {
     title: 'PREMIUM LUXURY CAR RENTAL SERVICES',
     breadcrumbTitle: 'Luxury Car Rentals',
+    icon: '/images/LuxuryCar.svg',
     description:
       'Chauffeur-driven luxury sedans, SUVs, and VIP mobility for corporate executives, dignitaries, and special enterprise events.',
     secondaryDescription:
@@ -86,6 +91,7 @@ export const serviceBannerData: Record<string, ServiceBannerProps> = {
   'electric-fleet': {
     title: 'SUSTAINABLE ELECTRIC EV FLEET SOLUTIONS',
     breadcrumbTitle: 'Electric Fleet',
+    icon: '/images/ElectricFeet.svg',
     description:
       'Zero-emission electric vehicle fleet management helping enterprises achieve ESG sustainability goals and lower carbon footprints.',
     secondaryDescription:
@@ -100,6 +106,7 @@ export const serviceBannerData: Record<string, ServiceBannerProps> = {
   'event-transport': {
     title: 'CORPORATE EVENT & CONFERENCE TRANSPORT',
     breadcrumbTitle: 'Event Transport',
+    icon: '/images/Eventtransport.svg',
     description:
       'End-to-end transport management and fleet logistics for corporate summits, conventions, and large-scale enterprise events.',
     secondaryDescription:

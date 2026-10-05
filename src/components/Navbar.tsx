@@ -49,7 +49,7 @@ const ClipboardList: IconComponent = ({ className }) => (
 );
 
 // An item uses either an SVG file from /public/images (img) or an inline icon component (icon)
-type MenuItem = { name: string; img?: string; icon?: IconComponent };
+type MenuItem = { name: string; href?: string; img?: string; icon?: IconComponent };
 
 export const Navbar: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -72,43 +72,75 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const services: MenuItem[] = [
-    { name: 'Corporate Employee Transportation', img: '/images/Corporate-transport.svg' },
-    { name: 'Corporate Fleet Management', img: '/images/FleetManagement.svg' },
-    { name: 'Airport Transfers', img: '/images/Airport.svg' },
-    { name: 'Monthly & Hourly Rentals', img: '/images/Rental.svg' },
-    { name: 'Outstation Rides', img: '/images/Outstation-rides.svg' },
-    { name: 'Luxury Car Rentals', img: '/images/LuxuryCar.svg' },
-    { name: 'Electric Fleet', img: '/images/ElectricFeet.svg' },
-    { name: 'Event Transport', img: '/images/Eventtransport.svg' },
+    {
+      name: 'Corporate Employee Transportation',
+      href: '/services/corporate-employee-transportation',
+      img: '/images/Corporate-transport.svg',
+    },
+    {
+      name: 'Corporate Fleet Management',
+      href: '/services/corporate-fleet-management',
+      img: '/images/FleetManagement.svg',
+    },
+    {
+      name: 'Airport Transfers',
+      href: '/services/airport-transfers',
+      img: '/images/Airport.svg',
+    },
+    {
+      name: 'Monthly & Hourly Rentals',
+      href: '/services/monthly-hourly-rentals',
+      img: '/images/Rental.svg',
+    },
+    {
+      name: 'Outstation Rides',
+      href: '/services/outstation-rides',
+      img: '/images/Outstation-rides.svg',
+    },
+    {
+      name: 'Luxury Car Rentals',
+      href: '/services/luxury-car-rentals',
+      img: '/images/LuxuryCar.svg',
+    },
+    {
+      name: 'Electric Fleet',
+      href: '/services/electric-fleet',
+      img: '/images/ElectricFeet.svg',
+    },
+    {
+      name: 'Event Transport',
+      href: '/services/event-transport',
+      img: '/images/Eventtransport.svg',
+    },
   ];
 
   const industries: MenuItem[] = [
-    { name: 'IT and Technology', img: '/images/IT.svg' },
-    { name: 'Financial sector', img: '/images/Financial.svg' },
-    { name: 'Corporate offices', img: '/images/Corporate.svg' },
-    { name: 'Educational institutions', img: '/images/Education.svg' },
-    { name: 'Healthcare organizations', img: '/images/Healthcare.svg' },
-    { name: 'Hospitality businesses', img: '/images/Hospitality.svg' },
-    { name: 'MNCs & large enterprises', img: '/images/MNC.svg' },
-    { name: 'Manufacturing companies', img: '/images/Manufacturing.svg' },
+    { name: 'IT and Technology', href: '/services', img: '/images/IT.svg' },
+    { name: 'Financial sector', href: '/services', img: '/images/Financial.svg' },
+    { name: 'Corporate offices', href: '/services', img: '/images/Corporate.svg' },
+    { name: 'Educational institutions', href: '/services', img: '/images/Education.svg' },
+    { name: 'Healthcare organizations', href: '/services', img: '/images/Healthcare.svg' },
+    { name: 'Hospitality businesses', href: '/services', img: '/images/Hospitality.svg' },
+    { name: 'MNCs & large enterprises', href: '/services', img: '/images/MNC.svg' },
+    { name: 'Manufacturing companies', href: '/services', img: '/images/Manufacturing.svg' },
   ];
 
   const aboutUs: MenuItem[] = [
-    { name: 'About the Company', img: '/images/About.svg' },
-    { name: 'Leadership Team', img: '/images/Leadershipteam.svg' },
-    { name: 'Clients', img: '/images/Clients.svg' },
-    { name: 'Testimonials', img: '/images/Testimonials.svg' },
-    { name: 'Awards & Recognition', img: '/images/Awards.svg' },
-    { name: 'Our Vehicles', img: '/images/Vehicles.svg' },
-    { name: 'Join Our Fleet', img: '/images/JoinourFleet.svg' },
+    { name: 'About the Company', href: '#', img: '/images/About.svg' },
+    { name: 'Leadership Team', href: '#', img: '/images/Leadershipteam.svg' },
+    { name: 'Clients', href: '#', img: '/images/Clients.svg' },
+    { name: 'Testimonials', href: '#', img: '/images/Testimonials.svg' },
+    { name: 'Awards & Recognition', href: '#', img: '/images/Awards.svg' },
+    { name: 'Our Vehicles', href: '#', img: '/images/Vehicles.svg' },
+    { name: 'Join Our Fleet', href: '#', img: '/images/JoinourFleet.svg' },
   ];
 
- const resources: MenuItem[] = [
-  { name: 'Blog', img: '/images/Blog.svg' },
-  { name: 'FAQ', img: '/images/Faq.svg' },
-  { name: 'Gallery', img: '/images/Gallery.svg' },
-  { name: 'Case Studies', img: '/images/Casestudies.svg' },
-];
+  const resources: MenuItem[] = [
+    { name: 'Blog', href: '#', img: '/images/Blog.svg' },
+    { name: 'FAQ', href: '#faq', img: '/images/Faq.svg' },
+    { name: 'Gallery', href: '#', img: '/images/Gallery.svg' },
+    { name: 'Case Studies', href: '#', img: '/images/Casestudies.svg' },
+  ];
   const locations = [
     'Bangalore',
     'Hyderabad',
@@ -124,10 +156,11 @@ export const Navbar: React.FC = () => {
   const renderItems = (items: MenuItem[]) =>
     items.map((item, i) => {
       const IconComp = item.icon;
+      const targetHref = item.href || '#';
       return (
-        <a
+        <Link
           key={i}
-          href="#"
+          href={targetHref}
           onClick={() => setActiveDropdown(null)}
           className="flex items-center gap-4 p-[10px] rounded-[12px] hover:bg-[#FFF5EF] transition-all group cursor-pointer"
         >
@@ -135,12 +168,13 @@ export const Navbar: React.FC = () => {
             {item.img ? (
               <Image src={item.img} alt="" className=" object-contain" width={40} height={40} />
             ) : IconComp ? (
-<IconComp className="w-10 h-10 p-[10px] rounded-[12px] bg-[#FFF0E6] border border-[#FFDEC9] text-[#D34F0D] stroke-[2]" />            ) : null}
+              <IconComp className="w-10 h-10 p-[10px] rounded-[12px] bg-[#FFF0E6] border border-[#FFDEC9] text-[#D34F0D] stroke-[2]" />
+            ) : null}
           </div>
           <span className="">
             {item.name}
           </span>
-        </a>
+        </Link>
       );
     });
 
@@ -219,9 +253,9 @@ export const Navbar: React.FC = () => {
               'locations',
               'left-0 w-[260px]',
               locations.map((loc, i) => (
-                  <a
+                  <Link
                     key={i}
-                    href="#"
+                    href="/services"
                     onClick={() => setActiveDropdown(null)}
                     className="flex items-center gap-3 p-[10px] rounded-[10px] hover:bg-[#FFF5EF] text-sm font-bold text-[#212529] hover:text-[#D34F0D] transition-colors group"
                   >
@@ -229,7 +263,7 @@ export const Navbar: React.FC = () => {
                       <MapPin className="w-4 h-4" />
                     </div>
                     <span>{loc}</span>
-                  </a>
+                  </Link>
               ))
             )}
           </div>
@@ -250,9 +284,9 @@ export const Navbar: React.FC = () => {
         {/* Right Action buttons */}
         <div className="flex items-center gap-3">
           {/* Figma "Get a Quote" Button */}
-          <a href="#" className="btn-quote text-xs font-bold whitespace-nowrap shadow-md">
+          <Link href="#quote-form" className="btn-quote text-xs font-bold whitespace-nowrap shadow-md">
             Get a Quote
-          </a>
+          </Link>
 
           {/* Mobile Menu Toggle */}
           <button

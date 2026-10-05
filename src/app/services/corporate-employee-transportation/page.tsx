@@ -17,16 +17,7 @@ export default function CorporateEmployeeTransportationPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Reusable Service Banner Section for Corporate Employee Transportation */}
-      <ServiceBanner
-        title={bannerProps.title}
-        breadcrumbTitle={bannerProps.breadcrumbTitle}
-        description={bannerProps.description}
-        secondaryDescription={bannerProps.secondaryDescription}
-        ctaText={bannerProps.ctaText}
-        ctaHref={bannerProps.ctaHref}
-        bgImage={bannerProps.bgImage}
-        badgeText={bannerProps.badgeText}
-      />
+      <ServiceBanner {...bannerProps} />
 
       {/* Reusable Client / Partner Logos Marquee Section */}
       <ClientLogosSection />
