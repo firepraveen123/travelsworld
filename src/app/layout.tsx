@@ -19,9 +19,12 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body className="bg-slate-950 text-slate-100 font-sans selection:bg-orange-500 selection:text-white">
+      <body className="bg-white text-slate-900 font-sans selection:bg-orange-500 selection:text-white">
         <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>

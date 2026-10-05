@@ -188,13 +188,17 @@ h1, h2, h3, h4, h5, h6 {
   animation: float 4s ease-in-out infinite;
 }
 
-.Common_title{ margin-top: 14px;
-  font-size: 30px;
+.Common_title {
+  margin-top: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 48px;
   font-weight: 400;
-  line-height: 1.22;
+  line-height: 62.6px;
+  letter-spacing: 0px;
   text-transform: uppercase;
-  color: var(--brown);
-  max-width: 340px;}
+  color: #5B2C06;
+  max-width: 582px;
+}
 .Common_description{ margin-top: 16px;
   font-size: 11px;
   line-height: 1.6;
@@ -205,3 +209,38 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
   color: #685C52;
   max-width: 400px;}
+
+/* Marquee Horizontal Scroll */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee-fast {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-fast:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}

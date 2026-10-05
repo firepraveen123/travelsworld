@@ -111,14 +111,14 @@ export const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const services = [
-    { name: 'Corporate Employee Transportation', icon: Bus },
-    { name: 'Corporate Fleet Management', icon: Car },
-    { name: 'Airport Transfers', icon: Plane },
-    { name: 'Monthly & Hourly Rentals', icon: Clock },
-    { name: 'Outstation Rides', icon: Navigation },
-    { name: 'Luxury Car Rentals', icon: Car },
-    { name: 'Electric Fleet', icon: Zap },
-    { name: 'Event Transport', icon: Bus },
+    { name: 'Corporate Employee Transportation', href: '/services/corporate-employee-transportation', icon: Bus },
+    { name: 'Corporate Fleet Management', href: '/services/corporate-fleet-management', icon: Car },
+    { name: 'Airport Transfers', href: '/services/airport-transfers', icon: Plane },
+    { name: 'Monthly & Hourly Rentals', href: '/services/monthly-hourly-rentals', icon: Clock },
+    { name: 'Outstation Rides', href: '/services/outstation-rides', icon: Navigation },
+    { name: 'Luxury Car Rentals', href: '/services/luxury-car-rentals', icon: Car },
+    { name: 'Electric Fleet', href: '/services/electric-fleet', icon: Zap },
+    { name: 'Event Transport', href: '/services/event-transport', icon: Bus },
   ];
 
   const industries = [
@@ -169,22 +169,23 @@ export const Navbar: React.FC = () => {
 
             {/* Figma Services Popup Menu */}
             {activeDropdown === 'services' && (
-              <div className="absolute top-full left-0 w-[420px] bg-white text-slate-900 rounded-[20px] shadow-2xl p-4 border border-slate-100/80 grid grid-cols-1 gap-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+              <div className="absolute top-full left-[20px] w-[376px] bg-white text-slate-900 rounded-[24px] shadow-2xl p-[20px] border border-slate-100/90 flex flex-col gap-[20px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                 {services.map((item, i) => {
                   const IconComp = item.icon;
                   return (
-                    <a
+                    <Link
                       key={i}
-                      href="#"
-                      className="flex items-center gap-4 p-2.5 rounded-[12px] hover:bg-[#FFF5EF] transition-all group cursor-pointer"
+                      href={item.href}
+                      onClick={() => setActiveDropdown(null)}
+                      className="flex items-center gap-[16px] h-[44px] w-full group cursor-pointer hover:translate-x-1 transition-all duration-200"
                     >
-                      <div className="w-11 h-11 rounded-[12px] bg-[#FFF0E6] border border-[#FFDEC9] text-[#D34F0D] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                      <div className="w-[44px] h-[44px] rounded-[14px] bg-[#FFF0E6] border border-[#FFDEC9] text-[#D34F0D] flex items-center justify-center shrink-0 group-hover:bg-[#D34F0D] group-hover:text-white group-hover:scale-105 transition-all shadow-sm">
                         <IconComp className="w-5 h-5 stroke-[2]" />
                       </div>
-                      <span className="text-sm font-bold text-[#212529] group-hover:text-[#D34F0D] transition-colors font-sans">
+                      <span className="text-[16px] font-semibold leading-[158%] text-[#383A42] group-hover:text-[#D34F0D] transition-colors font-sans tracking-normal select-none">
                         {item.name}
                       </span>
-                    </a>
+                    </Link>
                   );
                 })}
               </div>
@@ -203,7 +204,7 @@ export const Navbar: React.FC = () => {
 
             {/* Figma Industries Popup Menu */}
             {activeDropdown === 'industries' && (
-              <div className="absolute top-full left-0 w-[380px] bg-white text-slate-900 rounded-[20px] shadow-2xl p-4 border border-slate-100/80 grid grid-cols-1 gap-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+              <div className="absolute top-full left-[20px] w-[380px] bg-white text-slate-900 rounded-[20px] shadow-2xl p-4 border border-slate-100/80 grid grid-cols-1 gap-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                 {industries.map((item, i) => {
                   const IconComp = item.icon;
                   return (
@@ -237,7 +238,7 @@ export const Navbar: React.FC = () => {
 
             {/* Figma Locations Popup Menu */}
             {activeDropdown === 'locations' && (
-              <div className="absolute top-full left-0 w-[260px] bg-white text-slate-900 rounded-[20px] shadow-2xl p-3 border border-slate-100/80 grid grid-cols-1 gap-1 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+              <div className="absolute top-full left-[20px] w-[260px] bg-white text-slate-900 rounded-[20px] shadow-2xl p-3 border border-slate-100/80 grid grid-cols-1 gap-1 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                 {locations.map((loc, i) => (
                   <a
                     key={i}
