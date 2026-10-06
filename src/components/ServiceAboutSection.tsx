@@ -33,7 +33,7 @@ export const ServiceAboutSection: React.FC<ServiceAboutSectionProps> = ({
 }) => {
   return (
     <section className={`w-full py-[10px] bg-white text-slate-900 ${className}`}>
-      <div className="max-w-[1536px] mx-auto px-5 sm:px-8 lg:px-[57px]">
+      <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Badge, Title & CTA Button */}
           <div className="lg:col-span-6 space-y-6 max-w-xl">

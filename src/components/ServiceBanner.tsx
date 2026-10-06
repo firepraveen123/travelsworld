@@ -97,7 +97,7 @@ export const ServiceBanner: React.FC<ServiceBannerProps> = ({
         <div className="absolute bottom-0 left-0 right-0 z-20 h-2 bg-gradient-to-r from-[#D34F0D] via-[#E25510] via-60% to-transparent opacity-90" />
 
         {/* Content Container */}
-        <div className="relative z-10 w-full max-w-[1536px] mx-auto px-5 sm:px-8 lg:px-[57px] py-10 sm:py-14 lg:py-16">
+        <div className="relative z-10 container py-10 sm:py-14 lg:py-16">
           <div className="max-w-2xl lg:max-w-3xl space-y-5">
             {/* Optional Badge Tag */}
             {badgeText && (
