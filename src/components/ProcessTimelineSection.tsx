@@ -92,7 +92,7 @@ export const ProcessTimelineSection: React.FC<ProcessTimelineSectionProps> = ({
         </div>
       </div>
 
-      <div className="max-w-[1536px] mx-auto px-5 sm:px-8 lg:px-[57px] space-y-12 lg:space-y-16 relative z-10">
+      <div className="container space-y-12 lg:space-y-16 relative z-10">
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto space-y-4">
           <div>

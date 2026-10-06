@@ -101,7 +101,7 @@ export const KeyServicesSection: React.FC<KeyServicesSectionProps> = ({
       onMouseLeave={() => setIsHovered(false)}
       className={`w-full py-12 sm:py-16 lg:py-20 bg-[#FFF9F3] text-slate-900 ${className}`}
     >
-      <div className="max-w-[1536px] mx-auto px-5 sm:px-8 lg:px-[57px] space-y-8">
+      <div className="container space-y-8">
         {/* Header Section with Navigation Arrow Buttons */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="text-center md:text-left max-w-3xl space-y-3">

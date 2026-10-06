@@ -37,8 +37,8 @@ export const TrustStatsBanner: React.FC<TrustStatsBannerProps> = ({
   className = '',
 }) => {
   return (
-    <section className={`w-full py-8 sm:py-12 px-4 sm:px-8 lg:px-16 bg-white ${className}`}>
-      <div className="max-w-[1410px] mx-auto">
+    <section className={`w-full py-8 sm:py-12 bg-white ${className}`}>
+      <div className="container">
         {/* Main Vibrant Orange Gradient Banner Card (Figma Specs: Width 1410px, Height 455px, Radius 19px, Padding 75px 64px 32px 64px, Drop shadow 0 0 26.2px #5B2C06) */}
         <div
           className="relative w-full rounded-[19px] bg-gradient-to-r from-[#F45B13] via-[#E24E0D] to-[#CF4206] text-white pt-[32px] sm:pt-[50px] lg:pt-[75px] pb-[20px] sm:pb-[24px] lg:pb-[32px] px-[20px] sm:px-[40px] lg:px-[64px] min-h-[360px] lg:h-[455px] flex items-center overflow-hidden"

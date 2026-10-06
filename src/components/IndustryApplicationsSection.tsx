@@ -117,7 +117,7 @@ export const IndustryApplicationsSection: React.FC<IndustryApplicationsSectionPr
 }) => {
   return (
     <section className={`w-full py-12 sm:py-16 lg:py-20 bg-[#FFF9F3] text-slate-900 ${className}`}>
-      <div className="max-w-[1536px] mx-auto px-5 sm:px-8 lg:px-[57px] space-y-10 sm:space-y-12">
+      <div className="container space-y-10 sm:space-y-12">
         {/* Header Section */}
         <div className="text-center space-y-3">
           <div>
