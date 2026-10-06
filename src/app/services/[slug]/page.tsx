@@ -1,6 +1,10 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { ServiceBanner } from '@/components/ServiceBanner';
+import { KeyServicesSection } from '@/components/KeyServicesSection';
+import { ProcessTimelineSection } from '@/components/ProcessTimelineSection';
+import { ServiceAboutSection } from '@/components/ServiceAboutSection';
+import { IndustryApplicationsSection } from '@/components/IndustryApplicationsSection';
 import { ClientLogosSection } from '@/components/ClientLogosSection';
 import { TrustStatsBanner } from '@/components/TrustStatsBanner';
 import { serviceBannerData } from '@/data/serviceBannerData';
@@ -32,6 +36,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <ServiceBanner {...bannerProps} />
       <ClientLogosSection />
       <TrustStatsBanner />
+      <ServiceAboutSection />
+      <KeyServicesSection />
+      <ProcessTimelineSection />
+      <IndustryApplicationsSection />
       <HomapageSection />
     </main>
   );
